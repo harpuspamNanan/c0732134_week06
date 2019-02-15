@@ -15,5 +15,24 @@ namespace c0732134
         }
     }
 
+    class UsingRecursion
+    {
+        // A method that calculates sum of all numbers
+
+        public static int calculateRecursively(int n, int m)
+        {
+            int sum = n;
+            if ( n < m )
+            {
+                n++;
+                return (sum += calculateRecursively(n, m));
+            }
+            return sum;
+        }
+    }
+
+ 
+
+
 
 }
