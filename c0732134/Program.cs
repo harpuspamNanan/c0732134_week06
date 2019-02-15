@@ -11,6 +11,7 @@ namespace c0732134
         static void Main(string[] args)
         {
             Console.WriteLine(UsingRecursion.calculateRecursively(1, 3));       // Static Method. That's why called diffently
+
         }
     }
 
@@ -50,8 +51,37 @@ namespace c0732134
 
     class CountrySide                                                       
     {
-                                                                        // Linked List Class
-        Vi
+                                                                                    // Linked List Class
+        Village Maeland;
+        Village Helmholtz;
+        Village Alst;
+        Village Wessig;
+        Village Badden;
+        Village Uster;
+        Village Schvenig;
+
+        public void toRunThisClass()                                                // A method just to call other functions of this class in main 
+        {
+            this.createMap();
+        }
+
+        public void createMap()
+        {
+            Alst = new Village("Alst", false);                                                    // Can make a list to see how much distance Hudi travelled
+            Schvenig = new Village("Schvenig", false);
+            Wessig = new Village("Wessig", true);
+
+            Alst.east = Schvenig;
+            Alst.distanceToNextVillage = 14;
+
+            Alst.west = Wessig;
+            Alst.distanceToNextVillage = 19;
+        }
+
+        public Village traverse()                                                 // A function named Traverse of datatype Village
+        {
+
+        }
     }
 
  
