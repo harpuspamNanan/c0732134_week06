@@ -10,12 +10,58 @@ namespace c0732134
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             Console.WriteLine("Hello World!");
             Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
     }
+
+    class UsingRecursion
+    {
+        // Create an application which 
+        // calculates the sum of all the numbers from n to m recursively:
+
+        public static int CalculateRecursively(int n, int m)
+        {
+            int sum = n;
+
+            if (n < m)
+            {
+                n++;
+                return sum += CalculateRecursively(n, m);
+            }
+            return sum;
+        }
+
+
+    }
+
+    class CountrySide
+    {
+        // Create the LinkedList to reflect the Map in the PowerPoint Instructions
+        Village Maeland;
+        Village Helmholtz;
+        Village Alst;
+        Village Wessig;
+        Village Badden;
+        Village Uster;
+        Village Schvenig;
+
+
+        class Village
+        {
+            public Village(string _villageName, bool _isAHere)
+            {
+                isAstrildgeHere = _isAHere;
+                VillageName = _villageName;
+            }
+
+            public Village west;
+            public Village east;
+            public string VillageName;
+            public int distanceToNextVillage;
+            public int distanceToPreviousVillage;
+            public bool isAstrildgeHere;
+        }
+    }
+
 }
