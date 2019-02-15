@@ -43,7 +43,7 @@ namespace c0732134
         Village Alst;
         Village Wessig;
         Village Badden;
-        Village Uster;
+        Village Uster; 
         Village Schvenig;
 
 
