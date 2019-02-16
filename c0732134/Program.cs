@@ -67,7 +67,7 @@ namespace c0732134
 
         public void createMap()
         {
-            Alst = new Village("Alst", false);                                                    // Can make a list to see how much distance Hudi travelled
+            Alst = new Village("Alst", false);                                     // Can make a list to see how much distance Hudi travelled
             Schvenig = new Village("Schvenig", false);
             Wessig = new Village("Wessig", true);
 
@@ -78,9 +78,29 @@ namespace c0732134
             Alst.distanceToNextVillage = 19;
         }
 
-        public Village traverse()                                                 // A function named Traverse of datatype Village
+        public Village traverse(Village currentPoint)                                                 // A function named Traverse of datatype Village
         {
+            try
+            {
+                if (currentPoint.isAstrildgeHere)
+                {
+                    Console.WriteLine("Hey, Hugi found Astrilde in Village: " + currentPoint.villageName);
+                }
+            }
+            catch (NullReferenceException nre)
+            {
+                Console.WriteLine(nre.Message);
+            }
 
+            if(currentPoint == null)
+            {
+                return;
+            }
+
+            traverse(currentPoint.east);
+            traverse(currentPoint.west);
+
+            
         }
     }
 
